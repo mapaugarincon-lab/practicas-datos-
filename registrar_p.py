@@ -1,19 +1,15 @@
+from persona import Persona
 
+def registrar_persona():
+    print("--- Registrar Persona ---")
 
-class Persona:
-    def __init__(self, nombre, edad, cedula):
-        self.nombre = nombre
-        self.edad = edad
-        self.cedula = cedula
+    nombre = input("Nombre: ")
+    edad = input("Edad: ")
+    cedula = input("Cédula: ")
+    ciudad = input("Ciudad: ")
+    correo = input("Correo: ")
 
-class registrar_p:
-        print("--- Registrar Persona ---")
-        nombre = input("Nombre: ")
-        edad = int(input("Edad: "))
-        cedula = input("Cédula: ")
+    nueva_persona = Persona(nombre, edad, cedula, ciudad, correo)
+    Persona.personas.append(nueva_persona)
 
-        p = Persona(nombre, edad, cedula)
-        personas = []  
-        personas.append(p)
-        print("Persona registrada con éxito.")
-    
+    print(" Persona registrada con éxito")
